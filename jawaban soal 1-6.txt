@@ -1,0 +1,123 @@
+ .....JAWABAN SOAL NO.1 (RETURN VALUE JSON)
+
+
+<script type="text/javascript">
+ 
+      var JSON_biodata = {
+                        name:'Dandi',
+                        age:19,
+                        address: 'Jl kp kelapa',
+                        hobbies:['nulis cerpen','main game','nyanyi'],
+                        is_married:false,
+                        list_school:[
+                                {name:'Dandi', sekolah: 'SMP Makmur Jaya', year_in: 2011, year_out: 2013, major: 'null'},
+                                {name:'Dandi', sekolah:'SMK Wira Buana 2', year_in: 2014, year_out: 2017, major: 'RPL'}
+                        ],
+                        skills:[ {skill_name: 'social communication', level: 'beginner'},
+                            {skill_name: 'english', level: 'beginner'}
+                        ],
+                        interest_in_coding: true
+                   };
+    
+                    
+    var married;
+     
+    if(JSON_biodata.is_married){
+        married = "sudah nikah";
+    }else{
+        married = "belum nikah";
+    }
+
+    
+
+    var interest;
+     
+    if(JSON_biodata.interest_in_coding){
+        interest = "Tertarik";
+    }else{
+        interest = "Tidak tertarik";
+    }
+
+document.write( "nama" + ':' +JSON_biodata.name + "<br/> umur "+':'+JSON_biodata.age+"<br/>alamat"+':'+JSON_biodata.address+"<br/> hobi "+':' +JSON_biodata.hobbies[0]+ "<br/> status "+':' +married+ "<br />");
+    document.write("List sekolah : <br />");
+    document.write("<ol>")
+    for(var i=0; i<JSON_biodata.list_school.length; i++){
+        document.write("<li>" + JSON_biodata.list_school[i].name + " sekolah di " + JSON_biodata.list_school[i].sekolah + " tahun masuk " + JSON_biodata.list_school[i].year_in + " tahun keluar " + JSON_biodata.list_school[i].year_out + "&nbsp; jurusan"+ ':' +JSON_biodata.list_school[i].major+ "</li>");
+    }
+    document.write("</ol><br/>");
+    document.write("Kemampuan yang dimiliki : <br />");
+    document.write("<ol>")
+    for(var i=0; i<JSON_biodata.list_school.length; i++){
+        document.write("<li>" + JSON_biodata.skills[i].skill_name+'   -----  ' +'level'+':'+JSON_biodata.skills[i].level+"</li>" );
+    }
+    document.write("</ol><br/>");
+    document.write( "<br/> interest in coding"+ '   :'+interest)
+
+
+
+
+</script>
+
+SUMBER REFERENSI: https://terusbelajar.wordpress.com/2010/09/03/konsep-dasar-json-dan-penggunaannya/
+
+
+======================
+
+
+.....JAWABAN SOAL NO. 2 (REGEX)......
+
+
+<script type="text/javascript">
+	 function validateForm() {
+	pola_username="^(?!.*[-_]{2,})(?=^[^-_].*[^-_]$)[\w\s-]{5,9}$";
+	if (!pola_username.(formks.password.value)){
+    alert ('username tidak bisa digunakan');
+    return false;
+
+     pola_password=/^(?:(?=.*[a-z])(?:(?=.*[A-Z])(?=.*[\d\W])|(?=.*\W)(?=.*\d))|(?=.*\W)(?=.*[A-Z])(?=.*\d)).{8,}$/;
+  if (!pola_password.(formks.password.value)){
+    alert ('Bad passowrd');
+    return false;
+
+    </script>
+
+SUMBER REFERENSI: https://stackoverflow.com/questions/3466850/regular-expression-to-enforce-complex-passwords-matching-3-out-of-4-rules
+https://stackoverflow.com/questions/30012770/regex-for-username
+
+======================
+
+......JAWABAN SOAL NO.3 (MANIPULASI STRING)......
+
+
+import java.util.Scanner;
+ 
+class StringHitung {
+    
+    
+ 
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+ 
+        System.out.print("\nMasukan string : ");
+        String kata = s.nextLine();
+        System.out.print("\nMasukan kata : ");
+        String kata = s.nextLine();
+
+        int jumlahKata = 0;
+        int i = 0;
+        while (i < kata.length()) {
+          
+            while (i < kata.length() && kata.charAt(i) == ' ') i++; 
+ 
+            if (i < kata.length() && kata.charAt(i) != ' ') {
+                jumlahKata++;
+                while (i < kata.length() && kata.charAt(i) != ' ') i++;
+            }
+        }
+ 
+        System.out.println("\nJumlah Kata : " + jumlahKata + " kali");
+    }
+}
+       
+
+SUMBER REFERENSI: http://rutinitasinformatika.blogspot.com/2012/12/menghitung-jumlah-kata-huruf-dan-angka.html
